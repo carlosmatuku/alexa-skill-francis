@@ -1,0 +1,241 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "francis",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "annuler",
+            "annule"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "que dois-je dire",
+            "que dois-je faire",
+            "j\u0027ai besoin d\u0027aide",
+            "peux tu m\u0027aider s\u0027il te plait",
+            "je ne sais pas quoi dire",
+            "aide moi"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "au revoir",
+            "fermer francis",
+            "ferme francis",
+            "je veux quitter",
+            "non",
+            "quitter",
+            "merci Alexa",
+            "merci francis",
+            "merci ",
+            "annule tout",
+            "arrête tout",
+            "arrête",
+            "stop"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": [
+            "recommence",
+            "on recommence",
+            "reviens au début",
+            "retour"
+          ]
+        },
+        {
+          "name": "ReadStockIntent",
+          "slots": [
+            {
+              "name": "unity",
+              "type": "itemunity"
+            },
+            {
+              "name": "item",
+              "type": "stockitem"
+            }
+          ],
+          "samples": [
+            "il reste quelle quantité de {item}",
+            "quelle quantité de {item} reste-t-il",
+            "quelle quantité de {item} il reste",
+            "quelle est la quantité de {item}",
+            "quelle quantité de {item}",
+            "où en est le stock de {item}",
+            "quel est le stock de {item}",
+            "combien me reste t-il de {item}",
+            "combien de {unity} de {item} me reste-t-il",
+            "combien de {unity} de {item} reste-t-il",
+            "combien de {item} me reste-t-il",
+            "combien de {item} reste-t-il",
+            "combien me reste t-il de {unity} de {item}",
+            "il y a combien de {item}",
+            "il y a combien de {unity} de {item}",
+            "combien reste t-il de {unity} de {item}",
+            "combien reste t-il de {item}",
+            "combien y a t-il de {unity} de {item}",
+            "combien y a t-il de {item}",
+            "il reste Combien de {unity} de {item}",
+            "Combien de {unity} de {item}"
+          ]
+        },
+        {
+          "name": "ManageStockIntent",
+          "slots": [
+            {
+              "name": "quantity",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "unity",
+              "type": "itemunity"
+            },
+            {
+              "name": "item",
+              "type": "stockitem"
+            },
+            {
+              "name": "action",
+              "type": "ActionSlotType"
+            }
+          ],
+          "samples": [
+            "{action} {quantity} {unity} de {item} du stock",
+            "{action} {quantity} {unity} de {item} dans le stock",
+            "{action} {quantity} {unity} de {item}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "a7",
+              "name": {
+                "value": "levure boulangère"
+              }
+            },
+            {
+              "id": "a6",
+              "name": {
+                "value": "lait"
+              }
+            },
+            {
+              "id": "a5",
+              "name": {
+                "value": "farine de blé noir"
+              }
+            },
+            {
+              "id": "a8",
+              "name": {
+                "value": "levure chimique"
+              }
+            },
+            {
+              "name": {
+                "value": "sel"
+              }
+            },
+            {
+              "id": "a4",
+              "name": {
+                "value": "sucre"
+              }
+            },
+            {
+              "id": "A3",
+              "name": {
+                "value": "farine de sarrasin"
+              }
+            }
+          ],
+          "name": "stockitem"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "litre",
+                "synonyms": [
+                  "millilitre",
+                  "gallon",
+                  "centilitre",
+                  "décilitre"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "unité",
+                "synonyms": [
+                  "élément",
+                  "article"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "kilogramme",
+                "synonyms": [
+                  "décigramme",
+                  "milligramme",
+                  "centigramme",
+                  "kg",
+                  "kilos",
+                  "gramme",
+                  "kilo"
+                ]
+              }
+            }
+          ],
+          "name": "itemunity"
+        },
+        {
+          "values": [
+            {
+              "id": "RMV",
+              "name": {
+                "value": "retire",
+                "synonyms": [
+                  "soustraire",
+                  "soustrait",
+                  "sortir",
+                  "retirer",
+                  "enlever",
+                  "enlève",
+                  "sors"
+                ]
+              }
+            },
+            {
+              "id": "ADD",
+              "name": {
+                "value": "ajoute",
+                "synonyms": [
+                  "remet",
+                  "insérer",
+                  "insère",
+                  "remettre",
+                  "mettre",
+                  "met",
+                  "entre",
+                  "entrer",
+                  "ajouter"
+                ]
+              }
+            }
+          ],
+          "name": "ActionSlotType"
+        }
+      ]
+    }
+  },
+  "version": "38"
+}
